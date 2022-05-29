@@ -4,19 +4,12 @@ namespace WinFormsApp6
     {
         public Form1()
         {
-
             InitializeComponent();
-
         }
         bool start = true;
-
-        //bool isokay = true;
-       // bool isokay2 = false;
-
         bool clickbutton = false;
         int numiter = 0;
         string operators = "";
-        double[] num = new double[2];
         private void one_Click(object sender, EventArgs e)
         {
 
@@ -34,14 +27,11 @@ namespace WinFormsApp6
                     clickbutton = false;
                 }
                 txt_label.Text += button.Text;
-                //if (num2 == default)
-                //{
 
-                //    num2= Convert.ToDouble(txt_label.Text); 
-                //}
             }
             
         }
+        double[] num = new double[2];
         private double Check(string oper,double num,double num2){
             switch (oper)
             {
@@ -64,12 +54,6 @@ namespace WinFormsApp6
             if (sender is Button button)
             {
 
-                //if (isa2)
-                //{
-                //    txt_label.Text = "";
-                //    isa2 = false;
-
-                //}
                 if (button.Text != "=" && txt_label.Text == "0") return;
                 if (start)num[0] = Convert.ToDouble(txt_label.Text);
                 

@@ -54,7 +54,7 @@ namespace WinFormsApp6
             if (sender is Button button)
             {
 
-                if (button.Text != "=" && txt_label.Text == "0") return;
+                if (button.Text == "=" && txt_label.Text == "0") return;
                 if (start)num[0] = Convert.ToDouble(txt_label.Text);
                 
                 if(!trueorfalse)num[1] = Convert.ToDouble(txt_label.Text);
@@ -113,7 +113,6 @@ namespace WinFormsApp6
                             if (!start)
                             {
                                 numbers = Check(opea, num[0], num[1]);
-            
                                 if(opea!= "²") num[0] = numbers;
                             }
                             txt_label.Text = num[0].ToString();

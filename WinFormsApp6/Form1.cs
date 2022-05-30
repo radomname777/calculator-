@@ -15,12 +15,14 @@ namespace WinFormsApp6
 
 
             if (sender is Button button)
+
             {
                 if (txt_label.Text=="0")
                 {
                     if (button.Text!="00") txt_label.Text = button.Text;
                     return;
                 }
+                else if (button.Text == "," &&txt_label.Text.Contains(",") )  return;
                 if (clickbutton)
                 {
                     txt_label.Text = "0";
@@ -55,6 +57,7 @@ namespace WinFormsApp6
             {
 
                 if (button.Text == "=" && txt_label.Text == "0") return;
+      
                 if (start)num[0] = Convert.ToDouble(txt_label.Text);
                 
                 if(!trueorfalse)num[1] = Convert.ToDouble(txt_label.Text);
